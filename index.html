@@ -136,9 +136,9 @@ questions.forEach((q, index) =>{
 const card = document.createElement("div");
 card.id = "q-card-${index}" ;
 //스크롤하면서 하나씩 집중되도록 이쁘게 연출된 카드 디자인
-card.className = `"bg-white p-6 rounded-2xl shadow-md border border-slate-100transition-all duration-300 transform space-y-4 opacity-40";
+card.className = "bg-white p-6 rounded-2xl shadow-md border border-slate-100transition-all duration-300 transform space-y-4 opacity-40";
 if(index === 0) card.classList.remove('opacity-40'); // 첫 문항 선명하게
-    card.innerHTML = <div class="flex items-center space-x-2"> <span class="bg-indigo-900/60 text-indigo-400 text-xs font-bold px-2.5 py-1 rounded-full border border-indigo-800">Q.${index + 1}</span> </div> <h3 class="text-lg md:text-xl font-bold text-slate-100">${q.q}</h3> <div class="grid grid-cols-1 gap-3 pt-2"> <button onclick="selectOption(${index}, 'A')" id="btn-${index}-A" class="text-left p-4 rounded-xl border border-slate-700 bg-slate-800/40 hover:border-indigo-500 hover:bg-indigo-950/20 font-semibold transition text-slate-300 cursor-pointer"> ${q.a} </button> <button onclick="selectOption(${index}, 'B')" id="btn-${index}-B" class="text-left p-4 rounded-xl border border-slate-700 bg-slate-800/40 hover:border-indigo-500 hover:bg-indigo-950/20 font-semibold transition text-slate-300 cursor-pointer"> ${q.b} </button> </div>;`
+    card.innerHTML = `<div class="flex items-center space-x-2"> <span class="bg-indigo-900/60 text-indigo-400 text-xs font-bold px-2.5 py-1 rounded-full border border-indigo-800">Q.${index + 1}</span> </div> <h3 class="text-lg md:text-xl font-bold text-slate-100">${q.q}</h3> <div class="grid grid-cols-1 gap-3 pt-2"> <button onclick="selectOption(${index}, 'A')" id="btn-${index}-A" class="text-left p-4 rounded-xl border border-slate-700 bg-slate-800/40 hover:border-indigo-500 hover:bg-indigo-950/20 font-semibold transition text-slate-300 cursor-pointer"> ${q.a} </button> <button onclick="selectOption(${index}, 'B')" id="btn-${index}-B" class="text-left p-4 rounded-xl border border-slate-700 bg-slate-800/40 hover:border-indigo-500 hover:bg-indigo-950/20 font-semibold transition text-slate-300 cursor-pointer"> ${q.b} </button> </div>;`
 container.appendChild(card);});}
 // 테스트 시작하기 클릭 시 작동
 function startTest() {
